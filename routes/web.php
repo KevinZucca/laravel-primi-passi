@@ -22,6 +22,17 @@ Route::get('/', function () {
         "Start coding"
     ];
 
-
     return view('home', compact('introduction', 'toDo'));
-});
+})->name('home');
+
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+
+Route::get('/articles', function () {
+    return view('articles');
+})->name('articles');
+
+Route::get('/about_us', function () {
+    return view('aboutUs');
+})->name('about_us');
